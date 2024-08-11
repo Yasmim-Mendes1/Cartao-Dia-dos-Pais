@@ -1,0 +1,182 @@
+@font-face {
+  font-family: 'pai';
+  src: url('Aston\ Script.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(168, 167, 167, 0.6);
+  margin: 0;
+}
+
+.birthdayCard {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 4s;
+}
+
+.birthdayCard:hover {
+  transform: perspective(2500px) rotate(5deg);
+  box-shadow: inset 150px 30px 150px rgba(0, 0, 0, 0.15), 0 15px 150px rgba(0, 0, 0, 0.3);
+}
+
+.birthdayCard:hover .cardFront {
+  transform: rotateY(-160deg);
+}
+
+.birthdayCard:hover .front-text {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-deco {
+  display: none;
+}
+
+.birthdayCard:hover .wrap-decoTwo {
+  display: none;
+}
+
+.birthdayCard:hover .plate {
+  display: none;
+}
+
+.birthdayCard:hover .barco {
+  display: none;
+}
+
+.cardFront {
+  position: relative;
+  background-color: rgb(255, 246, 246);
+  width: 400px;
+  height: 600px;
+  overflow: hidden;
+  transform-origin: left;
+  box-shadow: inset 150px 30px 150px rgba(0, 0, 0, 0.13), 40px 0 70px rgba(0, 0, 0, 0.1);
+  transition: 0.4s;
+}
+
+.letra1, .letra2 {
+  position: relative;
+  font-family: Didot, serif;
+  text-align: center;
+  backface-visibility: hidden;
+  font-size: 15px;
+  color: #787878;
+}
+
+.letra1 {
+  top: 85px;
+}
+
+.letra2 {
+  top: 345px;
+}
+
+.bday {
+  position: relative;
+  font-family: Arial, sans-serif;
+  font-size: 50px;
+  text-align: center;
+  top: 270px;
+}
+
+.barco {
+  position: relative;
+  top: 70px;
+}
+
+.barco img {
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.feliz, .pais {
+  position: relative;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #787878;
+}
+
+.feliz {
+  top: 120px;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+.pais {
+  top: 35px;
+  font-family: 'pai';
+  font-size: 50px;
+}
+
+.flame {
+  position: absolute;
+  background-color: #fb5607;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  transform: rotate(-45deg);
+  width: 30px;
+  height: 30px;
+  opacity: 0.7;
+  top: -120px;
+  left: 100px;
+}
+
+.cardInside {
+  position: absolute;
+  background-color: #fff;
+  width: 400px;
+  height: 600px;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  box-shadow: inset 150px 30px 150px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inside-text {
+  position: relative;
+  top: 0;
+  transform: scale(1);
+}
+
+.photos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.photos img {
+  width: 150px;
+  height: auto;
+  margin: 0 15px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.wishes {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  position: relative;
+  margin: 40px;
+  font-size: 15px;
+  color: #787878;
+}
+
+.nome {
+  margin: 0 0 0 150px;
+  color: #787878;
+}
